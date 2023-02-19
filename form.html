@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Product Enquiry</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+  *{
+    margin:0;
+    padding:0;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #4088a089;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+ul li {
+    list-style: none;
+}
+h1{
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #7a00ff;
+    font-size: 32px;
+    width: 200px;
+    text-align: center;
+    margin: 30px 100px;
+}
+ul {
+    display: inline-block
+}
+#contact {
+    background: #fff;
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+   
+    margin:8% auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1)
+}
+.js #contact {
+    position: absolute;
+    top: 3em;
+    display: none;
+    left:0; right:0;
+}
+ 
+input {
+    border: 0;
+    margin: 1em 40px;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 2px solid #7a00ff;
+    background: none;
+    font-family: 'Fontawesome', 'Source Sans Pro', sans-serif;
+    display: block;
+    color: #7a00ff;
+}
+textarea{
+    border: 0;
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin-left: 40px;
+    background: none;
+    padding: 10px;
+    font-family: 'Fontawesome', 'Source Sans Pro', sans-serif;
+    border-bottom: 2px solid #7a00ff;
+    color: #7a00ff;
+}
+#submit {
+  margin: 3em auto 4em;
+  border: 2px solid #7a00ff;
+  color: #7a00ff;
+}
+#submit:hover {
+    color: #fff;
+}
+.btn{
+    background: none;
+    border: 2px solid #252525;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin: 15em auto;
+    padding: 1.2em 2em;
+    color: #212121;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease all .3s;
+    display: block;
+}
+ 
+.btn:hover{
+    background: #7a00ff;
+    color: #fff; border:
+    #7a00ff solid 2px;
+}
+.btn:active{
+    background: #3333aa;
+    color: #fff;
+    border: #3333aa solid 2px;
+}
+ 
+.close {
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 3em;
+    color: #ee4444;
+}
+@media (max-width: 765px) {
+    textarea{
+        width: 250px;
+    }
+    input {
+        width: 250px;
+    }
+}
+@media (max-width: 465px) {
+    textarea{
+        width: 250px;
+    }
+    input {
+        width: 250px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- <button type="button" class="btn" id="c-btn">Open Contact Form</button> -->
+
+<div id="contact">
+  <form action="https://formspree.io/f/xrgvpqpe" method="POST">
+    <ul>
+      <h1>Contact</h1>
+      <li>
+        <label><input type="text" name="name" id="name" placeholder="&#xf2c0; Full name"></label>
+        <label></label><input type="email" name="email" id="email" placeholder="&#xf003; Email"></label>
+        <label> <input type="phone" name="phone" id="phone" placeholder="&#xf095; Phone"></label>
+      </li>
+      <li>
+        <label> <textarea name="message" id="message" placeholder="&#xf040; Your message"></textarea></label>
+      </li>
+      <li>
+        <label></label><input type="submit" value="Send message" class="btn" id="submit"></label>
+      </li>
+    </ul>
+  </form>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<!-- <script>
+  (function(){
+  $('html').addClass('js');
+  
+  var contactForm = {
+    container: $('#contact'),
+    config: {
+      effect: 'slideToggle',
+      speed: 200
+    },
+    
+    init: function(config){
+      $.extend(this.config, config);
+      
+      $('#c-btn').on('click', this.show);
+    },
+
+    show: function(){
+      var cf = contactForm,
+          container = cf.container,
+          config = cf.config;
+                    
+
+      if(container.is(':hidden')){
+        cf.close.call(container);
+        container[config.effect]
+        (config.speed);
+      }
+    },
+
+    close: function(){
+      var $this = $('#contact'); 
+      
+      if($this.find('span.close').length) return;
+
+      $('<span class=close>-</span>')
+        .prependTo(this)
+        .on('click', function(){
+        $this[contactForm.config.effect](contactForm.config.speed);
+      })
+    }
+  };
+
+contactForm.init({
+  effect: 'fadeToggle',
+  speed: 200
+});
+})();
+</script> -->
+
+</body>
+</html>
